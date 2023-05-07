@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e1e1e;
+}
+
+body {
+  background-color: #000;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+small {
+  cursor: pointer;
+}
+
+footer {
+  height: 2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+/* ========================= */
+/* Navbar here */
+/* ========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+}
+
+nav > a {
+  padding: 0.5rem;
+  margin: 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.brand {
+  font-size: x-large;
+  font-weight: 900;
+  padding-top: 0rem;
+  margin-top: 0rem;
+}
+
+/* ========================= */
+/* Hero here */
+/* ========================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-img {
+  background-image: url("/Assets/bg3.jpg");
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -99;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.2), #000);
+  top: 0;
+  left: 0;
+}
+
+.hero-content > h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* ========================= */
+/* Explores here */
+/* ========================= */
+
+.explore {
+  margin: 2rem auto;
+  max-width: 1080px;
+  text-align: center;
+}
+
+.explore > * {
+  margin: 1rem 0rem;
+}
+
+.explore > p {
+  width: 60%;
+  margin: auto;
+}
+
+.explore-imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0rem;
+}
+
+.explore-card {
+  width: 20rem;
+  height: 25rem;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem;
+}
+
+.explore-card > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  transition: all 0.2s ease-in-out;
+}
+
+.explore-card > img:hover {
+  filter: brightness(40%);
+}
+
+.explore-text {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/* ========================= */
+/* Journal here */
+/* ========================= */
+
+.journal {
+  margin: 2rem auto;
+  max-width: 1080px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.journal > * {
+  margin: 1rem 0rem;
+}
+
+.journal > p {
+  width: 60%;
+  margin: auto;
+}
+
+.journal-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rem;
+}
+
+.card {
+  width: 30rem;
+  height: 20rem;
+  margin: 4rem;
+}
+
+.card > * {
+  margin: 0.5rem 0rem;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+.card > img:hover {
+  filter: brightness(50%);
+}
+
+/* ========================= */
+/* Footer here */
+/* ========================= */
+
+.footer-img {
+  height: 100vh;
+  position: relative;
+}
+
+.back-img {
+  background-image: url("/Assets/bg2.jpg");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back-img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.8) 40%, #000);
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+footer > a {
+  text-decoration: underline;
+}
+
+/* ========================= */
+/* For tablet and mobile screen here */
+/* ========================= */
+
+@media (max-width: 972px) {
+  nav > a {
+    margin: 0.5rem;
+  }
+
+  .explore-imgs {
+    flex-wrap: wrap;
+  }
+
+  .journal-cards {
+    flex-wrap: wrap;
+  }
+}
